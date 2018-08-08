@@ -1,0 +1,12 @@
+
+ eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/
+    register-with-eureka: false
+  #开发环境关闭自我保护模式,由于开发环境频繁重启，如果不关eureka心跳它不知道服务下线了没有。默认为还在线的
+  server:
+    enable-self-preservation: false
+ spring:
+   application:
+     name: eureka
